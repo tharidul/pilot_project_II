@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+.custom-shape-blue {
+    background-color: #0f2346;
+    clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.custom-shape-yellow {
+    background-color: #fcee21;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 80px) 100%, 0 100%);
+}
+
+header {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+}
