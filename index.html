@@ -624,6 +624,111 @@
         </div>
     </section>
 
+    <!-- Worker Accordion Section -->
+    <section class="bg-white py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+                <!-- Left Image with Yellow Box -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="relative pl-10 pb-10">
+                        <!-- Yellow Box Background -->
+                        <div class="absolute bottom-0 left-0 w-[85%] h-[85%] bg-xtra-yellow z-0"></div>
+                        <!-- Image -->
+                        <img src="man-worker.jpg" alt="Worker" class="relative z-10 w-full object-cover shadow-lg">
+                    </div>
+                </div>
+
+                <!-- Right Accordion -->
+                <div class="w-full lg:w-1/2">
+                    <div class="flex flex-col gap-4">
+
+                        <!-- Item 1 (Open) -->
+                        <div class="border border-blue-900/20 bg-white">
+                            <button onclick="toggleAccordion('acc1')"
+                                class="w-full text-left p-6 flex justify-between items-center bg-white">
+                                <span class="text-blue-900 font-bold text-lg">Entire Production Line Installation</span>
+                                <i id="icon-acc1" class="fa-solid fa-chevron-up text-blue-900"></i>
+                            </button>
+                            <div id="acc1"
+                                class="p-6 pt-0 text-gray-500 text-sm leading-relaxed block border-t border-gray-100">
+                                We can assist you in the modernization of your facility, the installation and repair of
+                                your equipment, and general and preventive plant maintenance and industrial systems for
+                                modern works.
+                            </div>
+                        </div>
+
+                        <!-- Item 2 (Closed) -->
+                        <div class="bg-xtra-blue">
+                            <button onclick="toggleAccordion('acc2')"
+                                class="w-full text-left p-5 flex justify-between items-center text-white">
+                                <span class="font-bold text-lg">Small & Large Component Fabrication</span>
+                                <i id="icon-acc2" class="fa-solid fa-chevron-down text-white"></i>
+                            </button>
+                            <div id="acc2"
+                                class="p-5 pt-0 text-gray-300 text-sm leading-relaxed hidden bg-xtra-blue border-t border-blue-800">
+                                Comprehensive fabrication services for components of all sizes, ensuring precision and
+                                durability for your industrial needs.
+                            </div>
+                        </div>
+
+                        <!-- Item 3 (Closed) -->
+                        <div class="bg-xtra-blue">
+                            <button onclick="toggleAccordion('acc3')"
+                                class="w-full text-left p-5 flex justify-between items-center text-white">
+                                <span class="font-bold text-lg">Hard Facing & Corrosion Resistant Overlay</span>
+                                <i id="icon-acc3" class="fa-solid fa-chevron-down text-white"></i>
+                            </button>
+                            <div id="acc3"
+                                class="p-5 pt-0 text-gray-300 text-sm leading-relaxed hidden bg-xtra-blue border-t border-blue-800">
+                                Advanced overlay solutions to protect your machinery from wear and corrosion, extending
+                                equipment lifespan.
+                            </div>
+                        </div>
+
+                        <!-- Item 4 (Closed) -->
+                        <div class="bg-xtra-blue">
+                            <button onclick="toggleAccordion('acc4')"
+                                class="w-full text-left p-5 flex justify-between items-center text-white">
+                                <span class="font-bold text-lg">Pipe fitting Complete Piping Systems</span>
+                                <i id="icon-acc4" class="fa-solid fa-chevron-down text-white"></i>
+                            </button>
+                            <div id="acc4"
+                                class="p-5 pt-0 text-gray-300 text-sm leading-relaxed hidden bg-xtra-blue border-t border-blue-800">
+                                Complete piping system installation and fitting services for industrial applications,
+                                ensuring leak-free performance.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Interactive Script for Accordion -->
+        <script>
+            function toggleAccordion(id) {
+                const content = document.getElementById(id);
+                const icon = document.getElementById('icon-' + id);
+                const isHidden = content.classList.contains('hidden');
+
+                // For simplicity, just toggle the clicked one. logic can be expanded to close others.
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                    // Style updates for active state if needed (e.g. background color swap for closed items)
+                    // Currently keeping simple toggle logic matching the static design of "Open" vs "Closed" style.
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            }
+        </script>
+    </section>
+
     <!-- Floating Chat Button (Bottom Left Fixed) -->
     <a href="#"
         class="fixed bottom-8 left-8 bg-xtra-yellow text-xtra-blue w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors z-50 md:hidden">
