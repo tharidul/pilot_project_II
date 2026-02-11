@@ -12,7 +12,7 @@
 
 <body class="bg-gray-50">
 
-    <header class="w-full relative overflow-x-hidden">
+    <header class="w-full absolute top-0 left-0 z-30 overflow-x-hidden">
 
         <div class="relative z-10">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -20,14 +20,14 @@
                 <div class="absolute top-0 bottom-0 right-[-100vw] left-[-100px] custom-shape-blue z-[-1]"></div>
 
 
-                <div class="flex flex-col md:flex-row justify-between items-center h-28 md:h-24 py-4">
+                <div class="flex flex-col md:flex-row justify-between items-center h-auto md:h-24 py-4">
 
                     <div class="flex items-center mb-4 md:mb-0">
                         <img src="logo.png" alt="XTRA INDUSTRIAL" class="h-16 w-auto object-contain">
                     </div>
 
 
-                    <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8 text-white">
+                    <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-white">
                         <div class="flex items-center">
                             <div class="text-yellow-400 text-3xl mr-3">
                                 <i class="fa-solid fa-phone-volume"></i>
@@ -88,7 +88,8 @@
                             <span
                                 class="absolute -top-2 -right-2 bg-blue-900 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">0</span>
                         </a>
-                        <a href="#" class="text-xl hover:text-black md:hidden"><i class="fa-solid fa-bars"></i></a>
+                        <a href="javascript:void(0)" onclick="toggleMobileMenu()"
+                            class="text-xl hover:text-black md:hidden"><i class="fa-solid fa-bars"></i></a>
                         <a href="#" class="text-xl hover:text-black hidden md:block"><i
                                 class="fa-solid fa-bars"></i></a>
                     </div>
@@ -96,6 +97,589 @@
             </div>
         </div>
     </header>
+
+    <!-- Hero Carousel Section -->
+    <section class="relative w-full h-screen overflow-hidden bg-gray-900 group">
+
+        <!-- Slides Container -->
+        <div id="carousel-slides" class="relative w-full h-full">
+
+            <!-- Slide 1 -->
+            <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 bg-cover bg-center"
+                style="background-image: url('slider1.png');">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+                <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                    <div class="w-full md:w-2/3 lg:w-1/2 text-white pl-4 md:pl-0 z-10">
+                        <h1 class="text-5xl md:text-7xl font-bold uppercase mb-4 tracking-tight">INDUSTRIAL</h1>
+                        <h2 class="text-2xl md:text-4xl text-xtra-yellow font-bold mb-6">Normal Speed Meets Every Need
+                        </h2>
+                        <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed">
+                            When It Seems There is Never Enough Time to Do Things the Right Way - Remember There is
+                            Always Enough Time for an Investigation
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-white text-xtra-blue font-bold text-sm tracking-wider uppercase py-4 px-8 rounded-sm hover:bg-xtra-yellow transition-colors duration-300">
+                            Get a Free Quote
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center"
+                style="background-image: url('slider2.png');">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+                <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                    <div class="w-full md:w-2/3 lg:w-1/2 text-white pl-4 md:pl-0 z-10">
+                        <h1 class="text-5xl md:text-7xl font-bold uppercase mb-4 tracking-tight">MANUFACTURING</h1>
+                        <h2 class="text-2xl md:text-4xl text-xtra-yellow font-bold mb-6">Precision Engineering</h2>
+                        <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed">
+                            Delivering high-quality manufacturing solutions with state-of-the-art machinery and expert
+                            precision for every project requirement.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-white text-xtra-blue font-bold text-sm tracking-wider uppercase py-4 px-8 rounded-sm hover:bg-xtra-yellow transition-colors duration-300">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 bg-cover bg-center"
+                style="background-image: url('slider3.png');">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+                <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                    <div class="w-full md:w-2/3 lg:w-1/2 text-white pl-4 md:pl-0 z-10">
+                        <h1 class="text-5xl md:text-7xl font-bold uppercase mb-4 tracking-tight">CONSTRUCTION</h1>
+                        <h2 class="text-2xl md:text-4xl text-xtra-yellow font-bold mb-6">Building Tomorrow</h2>
+                        <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed">
+                            Innovative construction projects that stand the test of time, built by dedicated teams
+                            committed to excellence and safety.
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-white text-xtra-blue font-bold text-sm tracking-wider uppercase py-4 px-8 rounded-sm hover:bg-xtra-yellow transition-colors duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Carousel Indicators & Controls -->
+        <div class="absolute bottom-10 right-10 z-20 flex space-x-2">
+            <button onclick="goToSlide(0)"
+                class="indicator w-3 h-3 bg-white hover:bg-xtra-yellow transition-colors duration-300 focus:outline-none"
+                aria-label="Slide 1"></button>
+            <button onclick="goToSlide(1)"
+                class="indicator w-3 h-3 bg-white/50 hover:bg-xtra-yellow transition-colors duration-300 focus:outline-none"
+                aria-label="Slide 2"></button>
+            <button onclick="goToSlide(2)"
+                class="indicator w-3 h-3 bg-white/50 hover:bg-xtra-yellow transition-colors duration-300 focus:outline-none"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Chat Icon Box -->
+        <div class="absolute bottom-10 right-24 z-20 hidden md:block">
+            <div
+                class="bg-white hover:bg-xtra-yellow text-xtra-blue w-10 h-10 flex items-center justify-center cursor-pointer transition-colors shadow-sm">
+                <i class="fa-regular fa-comment-dots text-lg"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Safety Section -->
+    <section class="relative bg-xtra-blue z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Yellow Box (Overlapping) -->
+                <div class="w-full lg:w-1/3 bg-xtra-yellow text-xtra-blue p-10 -mt-20 relative z-30 shadow-lg">
+                    <p class="text-xs font-bold uppercase tracking-widest mb-4">Our Aim - No Accidents</p>
+                    <h2 class="text-4xl md:text-5xl font-black uppercase leading-none mb-6">
+                        Safety Is<br>
+                        Success By<br>
+                        Purpose Not<br>
+                        Accident
+                    </h2>
+                    <div class="w-12 h-1 bg-xtra-blue mb-6"></div>
+                    <p class="text-sm font-semibold leading-relaxed">
+                        Never think working safe is in vain<br>
+                        when it could save a life time of pain
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="w-full lg:w-2/3 py-32 lg:pl-16">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Feature 1 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-gears text-xtra-yellow text-5xl mr-6"></i>
+                            <div>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 relative inline-block pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-8 after:h-0.5 after:bg-xtra-yellow">
+                                    Industrial Ideas</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mt-2">
+                                    Ignoring a warning can cause much mourning
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-hard-hat text-xtra-yellow text-5xl mr-6"></i>
+                            <div>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 relative inline-block pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-8 after:h-0.5 after:bg-xtra-yellow">
+                                    Expert Engineers</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mt-2">
+                                    If you're going to be stupid, you have to be tough!
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-robot text-xtra-yellow text-5xl mr-6"></i>
+                            <div>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 relative inline-block pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-8 after:h-0.5 after:bg-xtra-yellow">
+                                    Modern Equipment</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mt-2">
+                                    Life did not begin by accident, don't end it as one
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-headset text-xtra-yellow text-5xl mr-6"></i>
+                            <div>
+                                <h3
+                                    class="text-xl font-bold text-white mb-2 relative inline-block pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-8 after:h-0.5 after:bg-xtra-yellow">
+                                    Projects Support</h3>
+                                <p class="text-gray-400 text-sm leading-relaxed mt-2">
+                                    Make your plant the best, safer than all the rest
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="bg-white py-24">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center mb-6">
+                <i class="fa-solid fa-chart-simple text-xtra-yellow text-5xl"></i>
+            </div>
+            <h3 class="text-blue-900 font-bold uppercase tracking-widest mb-6 text-sm">Our Mission</h3>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-black max-w-5xl mx-auto leading-tight mb-6">
+                Industrial engineering, engineering dealing with the optimization of complex industrial processes or
+                systems
+            </h2>
+            <p class="text-gray-400 text-lg font-medium">
+                Safety records don't happen by accident
+            </p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-xtra-yellow py-10 md:py-24">
+        <div class="container mx-auto px-4">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-black/10">
+
+                <!-- Stat 1 -->
+                <div class="py-4">
+                    <div class="text-5xl md:text-7xl font-light text-xtra-blue mb-2">67<span
+                            class="text-4xl align-top">+</span></div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-black">Years of Experience</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="py-4">
+                    <div class="text-5xl md:text-7xl font-light text-xtra-blue mb-2">25<span class="text-5xl">k</span>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-black">Projects Done</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="py-4">
+                    <div class="text-5xl md:text-7xl font-light text-xtra-blue mb-2">99<span
+                            class="text-4xl align-top">+</span></div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-black">Awards Winning</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="py-4">
+                    <div class="text-5xl md:text-7xl font-light text-xtra-blue mb-2">75</div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-black">Modern Systems</div>
+                </div>
+
+                <!-- Stat 5 -->
+                <div class="py-4">
+                    <div class="text-5xl md:text-7xl font-light text-xtra-blue mb-2">9<span class="text-5xl">k</span>
+                    </div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-black">Expert Workers</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="flex flex-col lg:flex-row bg-gray-900 overflow-hidden">
+        <!-- Left Image -->
+        <div class="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-0">
+            <img src="welder.png" alt="Industrial Welder" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+
+        <!-- Right Content -->
+        <div class="w-full lg:w-1/2 bg-gray-900 text-white p-10 lg:p-28 relative z-10 lg:-ml-20"
+            style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);">
+            <!-- On large screens, we might want a slant. Let's try a simple overlap first or a clip-path if needed. 
+                 The request shows a slanted divider. I'll simulate it with a pseudo-element or clip-path on the container.
+                 Actually, simpler is just overlapping. -->
+            <div
+                class="absolute inset-y-0 -left-20 w-40 bg-gray-900 hidden lg:block transform -skew-x-12 origin-top-right z-[-1]">
+            </div>
+            <!-- Wait, skew on a separate div behind is better than clip-path on content which clips content. -->
+
+            <!-- Let's try a standard approach: The right column has a solid background. 
+                  We'll use a wrapper for the background color and skew it?
+                  The screenshot shows the content is straight. The edge is slanted.
+                  So: -->
+            <div
+                class="absolute top-0 bottom-0 -left-[100px] w-[200px] bg-gray-900 transform -skew-x-12 hidden lg:block z-[-1]">
+            </div>
+
+            <i class="fa-solid fa-chart-simple text-xtra-yellow text-4xl mb-4"></i>
+            <h4 class="text-gray-500 mb-2">Follow traffic rules - Save your future</h4>
+            <h2 class="text-4xl font-bold mb-6">About Our <span class="text-xtra-yellow">Industrial Company</span></h2>
+            <p class="text-gray-400 mb-10 leading-relaxed">
+                We are truly your 'One Source' and it's our job to get you on operational and back on-line fast. Our
+                list of services is comprehensive, and it features:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-screwdriver-wrench text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Construction</h3>
+                        <p class="text-xs text-gray-500">Expert & modern systems</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-leaf text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Environmental</h3>
+                        <p class="text-xs text-gray-500">Waste management</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-gears text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Machinery</h3>
+                        <p class="text-xs text-gray-500">Equipment relocation</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-bolt text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Electrical Service</h3>
+                        <p class="text-xs text-gray-500">Electrical supply stores</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-magnifying-glass-chart text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Predictive</h3>
+                        <p class="text-xs text-gray-500">Asset optimization</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-fire-burner text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Weld, Fabrication</h3>
+                        <p class="text-xs text-gray-500">Machine shop work</p>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-compass-drafting text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">Engineering</h3>
+                        <p class="text-xs text-gray-500">Cognizant technology</p>
+                    </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="flex items-start">
+                    <div class="bg-xtra-yellow rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
+                        <i class="fa-solid fa-fan text-xtra-blue text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-1">HVAC Technicians</h3>
+                        <p class="text-xs text-gray-500">Have largest Network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineer Quote Section -->
+    <section class="bg-white py-32 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Left Content -->
+                <div class="w-full lg:w-1/2 lg:pr-32 mb-20 lg:mb-0 relative z-10">
+                    <i class="fa-solid fa-chart-simple text-xtra-yellow text-6xl mb-6"></i>
+                    <p class="text-blue-900 font-bold text-lg uppercase tracking-wide mb-4">Jack Cage <span
+                            class="text-gray-400 font-normal">- Engineer</span></p>
+                    <h2 class="text-5xl md:text-7xl font-bold text-black mb-16">
+                        Dare to <span class="text-blue-900">Be Aware</span>
+                    </h2>
+
+                    <div class="relative pl-8">
+                        <i
+                            class="fa-solid fa-quote-left text-xtra-yellow/40 text-9xl absolute -top-20 -left-12 z-[-1]"></i>
+                        <p class="text-gray-500 text-2xl leading-relaxed relative z-10">
+                            Because no plant can afford an inefficient operation or unplanned downtime, Marshall
+                            Industrial Technologies' Mechanical Services Group focuses on keeping your operation running
+                            at peak performance.
+                        </p>
+                        <i
+                            class="fa-solid fa-quote-right text-xtra-yellow/40 text-9xl absolute -bottom-16 right-0 z-[-1]"></i>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="w-full lg:w-1/2 flex justify-center relative">
+                    <!-- Yellow Frame -->
+                    <div
+                        class="absolute w-[300px] h-[350px] lg:w-[450px] lg:h-[550px] border-[16px] lg:border-[20px] border-xtra-yellow top-8 lg:top-12 left-1/2 transform -translate-x-1/2 z-0">
+                    </div>
+                    <!-- Image -->
+                    <img src="worker-man-1.jpg" alt="Jack Cage Engineer"
+                        class="relative z-10 w-[350px] lg:w-[550px] object-cover shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Good Quality Section -->
+    <section class="bg-xtra-blue py-32">
+        <div class="container mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-20">
+                <i class="fa-solid fa-chart-simple text-xtra-yellow text-5xl mb-6 inline-block"></i>
+                <p class="text-gray-400 text-lg mb-4">Have another day - By being safe today!</p>
+                <h2 class="text-5xl md:text-6xl font-bold text-white">
+                    A <span class="text-xtra-yellow">Good Quality</span> Is Not Accidental
+                </h2>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 px-4 lg:px-12">
+
+                <!-- Card 1 -->
+                <div
+                    class="relative border border-xtra-yellow/50 h-full pt-20 px-10 pb-24 group hover:border-xtra-yellow transition-colors duration-300">
+                    <!-- Icon Box -->
+                    <div
+                        class="absolute -top-12 left-8 w-24 h-24 bg-xtra-yellow flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-industry text-xtra-blue text-4xl"></i>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-white mb-6">Industrial Factories</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Wear an approved bike helmet when you go bike riding.
+                    </p>
+
+                    <!-- Button -->
+                    <div class="absolute bottom-0 right-0">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 bg-xtra-yellow text-xtra-blue font-bold py-4 px-8 hover:bg-white transition-colors duration-300">
+                            Learn more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="relative border border-xtra-yellow/50 h-full pt-20 px-10 pb-24 group hover:border-xtra-yellow transition-colors duration-300">
+                    <!-- Icon Box -->
+                    <div
+                        class="absolute -top-12 left-8 w-24 h-24 bg-xtra-yellow flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-hand-holding-hand text-xtra-blue text-4xl"></i>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-white mb-6">Experienced Workers</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        The door to safety swings on hinges of common sense.
+                    </p>
+
+                    <!-- Button -->
+                    <div class="absolute bottom-0 right-0">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 bg-xtra-yellow text-xtra-blue font-bold py-4 px-8 hover:bg-white transition-colors duration-300">
+                            Learn more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="relative border border-xtra-yellow/50 h-full pt-20 px-10 pb-24 group hover:border-xtra-yellow transition-colors duration-300">
+                    <!-- Icon Box -->
+                    <div
+                        class="absolute -top-12 left-8 w-24 h-24 bg-xtra-yellow flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-diagram-project text-xtra-blue text-4xl"></i>
+                    </div>
+
+                    <h3 class="text-3xl font-bold text-white mb-6">Industrial Networking</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        You get what you inspect, not what you expect in systems.
+                    </p>
+
+                    <!-- Button -->
+                    <div class="absolute bottom-0 right-0">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 bg-xtra-yellow text-xtra-blue font-bold py-4 px-8 hover:bg-white transition-colors duration-300">
+                            Learn more <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Quote Strip Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+                <!-- Left Content -->
+                <div class="flex items-center gap-8 w-full md:w-auto">
+                    <!-- Icon Box -->
+                    <div class="w-24 h-24 bg-xtra-yellow flex items-center justify-center shrink-0">
+                        <i class="fa-regular fa-envelope-open text-blue-900 text-5xl"></i>
+                    </div>
+
+                    <!-- Text -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-black mb-2">
+                            Get A <span class="text-blue-900">Free Quote</span> For Your Project
+                        </h2>
+                        <p class="text-gray-500 text-lg">
+                            Feel free to contact us and get a free quote
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Button -->
+                <div class="w-full md:w-auto flex justify-center md:justify-end">
+                    <a href="#"
+                        class="inline-flex items-center gap-3 bg-xtra-yellow text-blue-900 font-bold py-5 px-10 hover:bg-white hover:shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        Contact Us Now
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chat Button (Bottom Left Fixed) -->
+    <a href="#"
+        class="fixed bottom-8 left-8 bg-xtra-yellow text-xtra-blue w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors z-50 md:hidden">
+        <i class="fa-solid fa-comment-dots text-2xl"></i>
+    </a>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.classList.remove('bg-white/50');
+                    indicator.classList.add('bg-xtra-yellow'); // Use yellow for active
+                } else {
+                    indicator.classList.remove('bg-xtra-yellow');
+                    indicator.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlides();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlides();
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+
+        // Initialize
+        updateSlides();
+        resetInterval();
+
+    </script>
 
     <script>
         tailwind.config = {
@@ -106,6 +690,84 @@
                         'xtra-yellow': '#fcee21',
                     }
                 }
+            }
+        }
+    </script>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300"
+        onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-[280px] bg-xtra-blue z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col shadow-2xl">
+        <div class="p-6 flex justify-end">
+            <button onclick="toggleMobileMenu()"
+                class="text-white hover:text-xtra-yellow transition-colors focus:outline-none">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto px-6 pb-6 space-y-1">
+            <a href="#"
+                class="block py-3 text-xtra-yellow font-bold text-sm uppercase border-b border-white/10">Home</a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">About</a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">Services</a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">Blog</a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">Projects</a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">Shop</a>
+            <a href="#"
+                class="flex justify-between items-center py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">
+                Pages
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">Contact</a>
+            <a href="#"
+                class="block py-3 text-white font-bold text-sm uppercase hover:text-xtra-yellow transition-colors border-b border-white/10">Buy
+                XTRA Theme</a>
+        </div>
+
+        <div class="p-6 mt-auto">
+            <div class="flex justify-center space-x-3 mb-6">
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-sm text-white hover:bg-xtra-yellow hover:text-xtra-blue transition-colors">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-sm text-white hover:bg-xtra-yellow hover:text-xtra-blue transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-sm text-white hover:bg-xtra-yellow hover:text-xtra-blue transition-colors">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-sm text-white hover:bg-xtra-yellow hover:text-xtra-blue transition-colors">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+            <p class="text-center text-gray-400 text-xs">© Copyright 2026</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-menu-overlay');
+
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                menu.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
             }
         }
     </script>

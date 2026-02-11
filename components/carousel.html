@@ -1,0 +1,134 @@
+<!-- Hero Carousel Section -->
+<section class="relative w-full h-[600px] md:h-[700px] overflow-hidden bg-gray-900 group">
+
+    <!-- Slides Container -->
+    <div id="carousel-slides" class="relative w-full h-full">
+
+        <!-- Slide 1 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100"
+            data-index="0">
+            <!-- Background Image -->
+            <div class="absolute inset-0">
+                <img src="slider1.png" alt="Industrial Worker" class="w-full h-full object-cover">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div class="w-full md:w-2/3 lg:w-1/2 text-white pl-4 md:pl-0">
+                    <h1 class="text-5xl md:text-7xl font-bold uppercase mb-4 tracking-tight">INDUSTRIAL</h1>
+                    <h2 class="text-2xl md:text-4xl text-xtra-yellow font-bold mb-6">Normal Speed Meets Every Need</h2>
+                    <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed">
+                        When It Seems There is Never Enough Time to Do Things the Right Way - Remember There is Always
+                        Enough Time for an Investigation
+                    </p>
+                    <a href="#"
+                        class="inline-block bg-white text-xtra-blue font-bold py-3 px-8 rounded-sm hover:bg-xtra-yellow transition-colors duration-300">
+                        Get a Free Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Left Decoration -->
+            <div class="absolute bottom-0 left-0 bg-xtra-yellow text-xtra-blue py-6 px-8 md:px-12 hidden md:block">
+                <p class="font-bold text-sm tracking-wide">OUR AIM - NO ACCIDENTS</p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0"
+            data-index="1">
+            <div class="absolute inset-0">
+                <img src="slider2.png" alt="Factory Machinery" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div class="w-full md:w-2/3 lg:w-1/2 text-white pl-4 md:pl-0">
+                    <h1 class="text-5xl md:text-7xl font-bold uppercase mb-4 tracking-tight">MANUFACTURING</h1>
+                    <h2 class="text-2xl md:text-4xl text-xtra-yellow font-bold mb-6">Precision Engineering Solutions
+                    </h2>
+                    <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed">
+                        Delivering high-quality manufacturing solutions with state-of-the-art machinery and expert
+                        precision for every project requirement.
+                    </p>
+                    <a href="#"
+                        class="inline-block bg-white text-xtra-blue font-bold py-3 px-8 rounded-sm hover:bg-xtra-yellow transition-colors duration-300">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            <!-- Bottom Left Decoration -->
+            <div class="absolute bottom-0 left-0 bg-xtra-yellow text-xtra-blue py-6 px-8 md:px-12 hidden md:block">
+                <p class="font-bold text-sm tracking-wide">QUALITY FIRST - ALWAYS</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0"
+            data-index="2">
+            <div class="absolute inset-0">
+                <img src="slider3.png" alt="Construction Site" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div class="w-full md:w-2/3 lg:w-1/2 text-white pl-4 md:pl-0">
+                    <h1 class="text-5xl md:text-7xl font-bold uppercase mb-4 tracking-tight">CONSTRUCTION</h1>
+                    <h2 class="text-2xl md:text-4xl text-xtra-yellow font-bold mb-6">Building Tomorrow, Today</h2>
+                    <p class="text-gray-200 text-lg mb-8 max-w-lg leading-relaxed">
+                        Innovative construction projects that stand the test of time, built by dedicated teams committed
+                        to excellence and safety.
+                    </p>
+                    <a href="#"
+                        class="inline-block bg-white text-xtra-blue font-bold py-3 px-8 rounded-sm hover:bg-xtra-yellow transition-colors duration-300">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <!-- Bottom Left Decoration -->
+            <div class="absolute bottom-0 left-0 bg-xtra-yellow text-xtra-blue py-6 px-8 md:px-12 hidden md:block">
+                <p class="font-bold text-sm tracking-wide">SAFETY & EXCELLENCE</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="absolute bottom-8 right-8 z-20 flex space-x-3">
+        <button onclick="goToSlide(0)"
+            class="indicator w-4 h-4 border-2 border-white bg-white transition-all duration-300 hover:bg-xtra-yellow hover:border-xtra-yellow focus:outline-none"
+            aria-label="Slide 1"></button>
+        <button onclick="goToSlide(1)"
+            class="indicator w-4 h-4 border-2 border-white bg-transparent transition-all duration-300 hover:bg-xtra-yellow hover:border-xtra-yellow focus:outline-none"
+            aria-label="Slide 2"></button>
+        <button onclick="goToSlide(2)"
+            class="indicator w-4 h-4 border-2 border-white bg-transparent transition-all duration-300 hover:bg-xtra-yellow hover:border-xtra-yellow focus:outline-none"
+            aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Chat Icon -->
+    <div class="absolute bottom-8 right-8 z-30 transform translate-y-20 translate-x-4">
+        <!-- Note: The screenshot implies chat icon is separate or maybe just indicators. I'll put it separately fixed or absolute. -->
+    </div>
+
+    <!-- Floating Chat Button (Fixed position as per common UI patterns, or seemingly part of hero) -->
+    <!-- The screenshot shows a chat icon in a white square at the bottom right. It looks like it might be part of the UI overlay. -->
+    <a href="#"
+        class="absolute bottom-8 right-8 bg-white text-xtra-blue w-12 h-12 flex items-center justify-center shadow-lg hover:bg-xtra-yellow transition-colors z-30">
+        <i class="fa-regular fa-comments text-xl"></i>
+    </a>
+
+    <!-- Bottom Left Circular Icon from screenshot -->
+    <div class="absolute bottom-8 left-8 z-30 md:hidden">
+        <!-- Placeholder for mobile visibility if needed -->
+    </div>
+
+</section>
+
+<!-- Floating Action Button (Yellow Circle with speech bubble) - As seen in bottom left of screenshot outside the yellow box? 
+         Actually, looks like bottom left is the yellow box. There is a yellow circle on the bottom left of the WINDOW, not the slide. 
+         Let's add that as fixed. -->
+<a href="#"
+    class="fixed bottom-8 left-8 bg-xtra-yellow text-xtra-blue w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors z-50">
+    <i class="fa-solid fa-comment-dots text-2xl"></i>
+</a>
